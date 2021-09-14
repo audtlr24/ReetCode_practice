@@ -17,10 +17,13 @@ class Solution4_2 {
     	if (arr.length<3) {
     		return false;
     	}
-    	int code = 0;
     	if (arr[0]>arr[1]) {
     		return false;
     	}
+    	if(arr[arr.length-1]>=arr[arr.length-2])
+    		return false;
+    	
+    	int code = 0;
     	for (int i=1;i<arr.length-1;i++) {
     		if (code == 0) {
 	    		if(arr[i-1]<arr[i] && arr[i]<arr[i+1]) {
